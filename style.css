@@ -1,0 +1,5 @@
+.selectedPageLink {
+    color: black;
+    text-decoration: none;
+    pointer-events: none;
+}
