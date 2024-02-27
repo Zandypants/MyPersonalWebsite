@@ -1,16 +1,41 @@
+body {
+    /* background: radial-gradient(#e2dad0, #9d8362); */
+    background: radial-gradient(#ebe6e0, #a79072);
+    /* background-image: url(./images/seamless_paper_texture.webp); */
+    /* background-repeat:no-repeat; */
+}
+
 nav {
     font-size: 24pt;
     display: flex;
     justify-content: center;
-    background-color: darkgray;
+    background-color: #6e5c45;
 }
 
 nav > a {
     margin: 4px 8px;
 }
 
+h1 {
+    text-align: center;
+    font-size: 48pt;
+}
+
 .selectedPageLink {
     color: black;
     text-decoration: none;
     pointer-events: none;
+}
+
+.containerCentered {
+    display: flex;
+    justify-content: center;
+}
+
+#portrait {
+    text-align: center;
+    height: 1000px;
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
