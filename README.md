@@ -1,0 +1,2 @@
+# My Personal website
+This is a place to showcase and build on my development skills, as well as present other information about myself that might be relevant to potential employers or peers in the industry.
