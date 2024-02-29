@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./reset.css"/>
         <link rel="stylesheet" href="./style.css"/>
         <title>Contact Me</title>
     </head>
@@ -17,16 +18,18 @@
             <h1>Contact Me:</h1>
         </header>
         <main>
-            <form action="success.html">
-                <label for="name">Name:</label>
-                <input type ="text" name="name" id="name" required/> <br/>
-                <label for="email">Email:</label>
-                <input type ="email" name="email" id="email" required/> <br/>
-                <label for="message">Message:</label> <br/>
-                <input type ="text" name="message" id="message" required/> <br/>
-                <input type="submit"/>
-                <span>(All fields must be filled out)</span>
-            </form>
+            <section class="containerCentered">
+                <form action="success.html">
+                    <label for="name">Name:</label>
+                    <input type ="text" name="name" id="name" required/> <br/>
+                    <label for="email">Email:</label>
+                    <input type ="email" name="email" id="email" required/> <br/>
+                    <label for="message">Message:</label> <br/>
+                    <textarea type="text" name="message" id="message" style="width: 100%; height: 3em;" required></textarea> <br/>
+                    <input type="submit"/>
+                    <span>(All fields must be filled out)</span>
+                </form>
+            </section>
         </main>
     </body>
 </html>

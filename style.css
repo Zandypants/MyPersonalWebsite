@@ -3,6 +3,7 @@ body {
     background: radial-gradient(#ebe6e0, #a79072);
     /* background-image: url(./images/seamless_paper_texture.webp); */
     background-repeat:no-repeat;
+    min-height: 100vh;
 }
 
 nav {
@@ -11,6 +12,15 @@ nav {
     justify-content: center;
     background-color: #6e5c45;
 }
+
+/* header nav {
+    position: absolute;
+    top: 0;
+}
+footer nav {
+    position: absolute;
+    bottom: 0;
+} */
 
 nav > a {
     margin: 4px 8px;
@@ -36,6 +46,16 @@ video {
 
 img {
     height: 720px;
+}
+
+form {
+    font-size: 1.6rem;
+}
+input {
+    height: 1em;
+}
+input[type="submit"] {
+    height: 1.5em;
 }
 
 .selectedPageLink {
