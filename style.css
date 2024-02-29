@@ -1,4 +1,10 @@
-body {
+:root {
+    --navFontSize: 1.5rem;
+    --navHoverScaleby: 1.4;
+    --navHeight: calc(2 * var(--navFontSize));
+}
+
+html {
     /* background: radial-gradient(#e2dad0, #9d8362); */
     background: radial-gradient(#ebe6e0, #a79072);
     /* background-image: url(./images/seamless_paper_texture.webp); */
@@ -7,21 +13,27 @@ body {
 }
 
 nav {
-    font-size: 24pt;
+    /* font-size: 24pt; */
+    font-size: var(--navFontSize);
     display: flex;
     justify-content: center;
     background-color: #6e5c45;
+    position: fixed;
+    width: 100%;
+    height: var(--navHeight);
+    transition: 0.4s;
 }
-
-/* header nav {
-    position: absolute;
+nav:hover {
+    /* scale: var(--navHoverScaleby); */
+    font-size: calc(var(--navFontSize) * var(--navHoverScaleby));
+    height: calc(var(--navHeight) * var(--navHoverScaleby));
+}
+header nav {
     top: 0;
 }
 footer nav {
-    position: absolute;
     bottom: 0;
-} */
-
+}
 nav > a {
     margin: 4px 8px;
 }
@@ -64,12 +76,17 @@ input[type="submit"] {
     pointer-events: none;
 }
 
-.containerCentered {
+.containerCentered, .centerScreen {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 20px;
     gap: 20px;
+}
+
+.centerScreen {
+    align-items: center;
+    height: 100vh;
 }
 .containerEnd {
     display: flex;
@@ -84,7 +101,7 @@ input[type="submit"] {
     gap: 20px;
     /* padding: 20px; */
 }
-.containerColumn {
+.containerColumn, #formContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,6 +119,18 @@ input[type="submit"] {
     min-height: 400px;
 }
 
+.manualCenter {
+    position: relative;
+    top: calc(50% - translate(50%));
+    left: 50%;
+}
+
+/* sticky navbar doesnt take up space like other elements, so this will take up the same space in its stead */
+.navBarPlaceholder {
+    width: 100%;
+    height: var(--navHeight);
+}
+
 #portrait {
     text-align: center;
     height: 1000px;
@@ -109,3 +138,7 @@ input[type="submit"] {
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+/* #formContainer {
+    margin-top: 20vh;
+} */
